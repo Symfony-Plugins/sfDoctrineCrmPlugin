@@ -1,0 +1,41 @@
+---
+sfCrmContactField:
+  Choice:
+    name: Choice
+    widget_type: Choice
+  ChoiceMany:
+    name: ChoiceMany
+    widget_type: ChoiceMany
+  Date:
+    name: Date
+    widget_type: Date
+  DateTime:
+    name: DateTime
+    widget_type: DateTime
+  Input:
+    name: Input
+    widget_type: Input
+  InputCheckbox:
+    name: InputCheckbox
+    widget_type: InputCheckbox
+  InputPassword:
+    name: InputPassword
+    widget_type: InputPassword
+  Select:
+    name: Select
+    widget_type: Select
+  SelectCheckbox:
+    name: SelectCheckbox
+    widget_type: SelectCheckbox
+  SelectMany:
+    name: SelectMany
+    widget_type: SelectMany
+  SelectRadio:
+    name: SelectRadio
+    widget_type: SelectRadio
+  Textarea:
+    name: Textarea
+    widget_type: Textarea
+  Time:
+    name: Time
+    widget_type: Time

@@ -1,0 +1,64 @@
+---
+sfCrmContact:
+  actAs:
+    Timestampable:
+    SoftDelete:
+  columns:
+    first_name: string(255)
+    middle_name: string(255)
+    last_name: string(255)
+    email_address: string(255)
+    status:
+      type: enum
+      values: ['Active', 'In-Active', 'Incomplete']
+
+sfCrmContactField:
+  columns:
+    name:
+      type: string(255)
+      notnull: true
+    widget_type:
+      type: enum
+      values: [Choice, ChoiceMany, Date, DateTime, Input, InputCheckbox, InputPassword, Select, SelectCheckbox, SelectMany, SelectRadio, Textarea, Time]
+    widget_values: array
+    widget_default_value: clob
+    is_required:
+      type: boolean
+      default: false
+
+sfCrmContactFieldValue:
+  columns:
+    sf_crm_contact_field_id: integer
+    sf_crm_contact_id: integer
+    value: clob
+  relations:
+    Field:
+      class: sfCrmContactField
+      foreignAlias: Values
+    Contact:
+      class: sfCrmContact
+      foreignAlias: Values
+
+sfCrmContactAddress:
+  columns:
+    sf_crm_contact_id: integer
+    address_1: string(255)
+    address_2: string(255)
+    address_3: string(255)
+    city: string(255)
+    state: string(255)
+    postal_code: string(255)
+    country: string(255)
+  relations:
+    Contact:
+      class: sfCrmContact
+      foreignAlias: Addresses
+
+sfCrmContactPhonenumber:
+  columns:
+    sf_crm_contact_id: integer
+    phonenumber: string(255)
+  relations:
+    Contact:
+      class: sfCrmContact
+      foreignAlias: Phonenumbers

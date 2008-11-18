@@ -1,0 +1,28 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           sfCrmContact
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          sf_crm_contact
+    with_doctrine_route:     1
+
+    config:
+      actions: ~
+      fields:  ~
+      list:    ~
+      filter:  ~
+      form:
+        class: sfCrmContactFormAdmin
+      edit:
+        actions:
+          new_address:
+          new_phonenumber:
+          _cancel:
+          _delete:
+          _save:
+          _save_and_add:
+      new:     ~
